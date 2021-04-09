@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class tugas2 {
+    public static void Kombinasi(String z, int a, int b){
+        if (a==0)
+            System.out.print(z+" ");
+        else
+            for(int i=97; i<97+b; i++)
+                Kombinasi(z+(char) i,a-1,b);
+    }
+    public static void main (String [] args){
+        System.out.println("Masukkan Jumlah Karakter = ");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        
+        Kombinasi(" ", n, n);
+        System.out.println(" ");
+    }
+}
