@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class tugas4 {
+    public static void pindah (int disc, char pasak1, char pasak2, char media){
+        if(disc==0){
+            return;
+        }else{
+            pindah (disc -1,pasak1,pasak2,media);
+            System.out.println("Pindahkan Disc" + disc + " Dari pasak" + pasak1 + " ke pasak "+ pasak2);
+            pindah (disc -1, media,pasak1,pasak2);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        System.out.println("Jumlah Pasak :");
+        int n = input.nextInt();
+        pindah (n, 'A','B','C');
+    }
+}
