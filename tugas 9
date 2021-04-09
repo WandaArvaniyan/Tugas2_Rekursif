@@ -1,0 +1,21 @@
+public class tugas9 {
+    // membuat variabel int dengan nama misteri
+    public static int mystery(int a, int b){
+        // jika int b sama dengan 0
+        if( b == 0)
+            // maka outputnya akan 0
+            return 0;
+        // jika b dibagi 2, sisa bagi di hilangkan
+        if(b%2 == 0)
+            //method digunakan apabila b dibagi 2 tidak memiliki sisa
+            return mystery(a+a, b/2);
+        // method digunakan apabila b dibagi 2 memiliki sisa
+        return mystery(a+a, b/2)+a;
+    }
+    // memunculkan output
+    public static void main(String[] args){
+        // masukkan nilai variabel
+        System.out.println(mystery(2, 25));
+        System.out.println(mystery(3, 11));
+    }
+}
