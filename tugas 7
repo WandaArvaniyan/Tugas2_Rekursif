@@ -1,0 +1,23 @@
+public class tugas7 {
+    // menampilkan output
+    public static void main(String[] args){
+        // inputan variabel int
+        int[] myArray = {1,2,3,4,5,6,7,8};
+        System.out.println(search(myArray, myArray.length, 100));
+    }
+    //method untuk mencari elemen
+    public static boolean search (int[] x, int size, int n){
+        // jika size lebih dari 0, maka outputnya 'true'
+        if (size > 0){
+            if (x[size-1] == n){
+                // mengembalikan nilai if
+                return true;
+            } else { // jika tidak, maka outputnya 'false'
+                return search(x, size-1, n);
+            }
+        }
+        // mengembalikan nilai else
+        return false;
+    }
+    
+}
