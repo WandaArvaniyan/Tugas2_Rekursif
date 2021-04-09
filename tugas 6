@@ -1,0 +1,18 @@
+public class tugas6 {
+    // menampilkan output
+    public static void main(String[] args){
+        System.out.println(test("01101", 4));
+    }
+    // program binary to decimal
+    public static int test(String s, int last){
+        // jika nilai last lebih kecil dari 0, maka hasilnya 0
+        if(last < 0){
+            return 0;
+            // proses perhitungan
+        } if (s.charAt(last) == 0){
+            return 2* test(s,last-1);
+        }
+        // return untuk mengembalikan nilai if
+        return 1 + 2 * test(s, last-1);
+    }
+}
