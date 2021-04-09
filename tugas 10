@@ -1,0 +1,15 @@
+public class tugas10 {
+    // method yang dapat menentukan apakah nilai int p dan q itu benar atau salah
+    public static boolean gollike(int p, int q){
+        // method q sama dengan 0
+        if(q == 0)
+            // method nilai p sama dengan 0
+            return (p == 1);
+        // method untuk penentuan output
+        return gollike(q, p % q);
+    }
+    // menampilkan output
+    public static void main(String[] args){
+        System.out.println(gollike(1,0));
+    }
+}
