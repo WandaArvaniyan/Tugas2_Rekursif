@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class tugas3 {
+    public static int Binary (int[] a, int b, int c){
+        if(c<0)
+            return -1;
+        else if (a[c] == b)
+            return c;
+        else 
+            return Binary(a,b,c-1);
+    }
+    public static int CariData(int[] a, int b){
+        return Binary(a,b,a.length -1);
+    }
+    public static void main(String[] args){
+        int[] angka = {2,3,4,5,6,7,8,9,10,11,12,13};
+        System.out.print("Data = ");
+        for (int i = 0; i<angka.length; i++)
+            System.out.print(" "+angka[i]);
+        System.out.println("\nData yang dicari : ");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int nilai = CariData(angka, n);
+        if(nilai >=0 ){
+        System.out.println("Data " + n + " berada pada index ke -" + nilai);
+        } else
+            System.out.println("Data Tidak Ditemukan");
+    }
+}
