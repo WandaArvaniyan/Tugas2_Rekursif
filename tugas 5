@@ -1,0 +1,16 @@
+public class tugas5 {
+    // method desimal to binary
+    public static void decToBin(int num){
+        // inputan variabel lebih besar dari 0
+        if(num > 0){ 
+            // mengkonversi desimal to biner
+            decToBin(num / 2); 
+            System.out.println(num % 2);
+        }
+    }
+    // menampilkan output
+    public static void main(String[] args){
+        // masukkan nilai desimal
+        decToBin(10);
+    }
+}
