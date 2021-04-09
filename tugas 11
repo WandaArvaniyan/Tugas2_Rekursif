@@ -1,0 +1,15 @@
+public class tugas11 {
+    //mendeklarasikan var string dengan tipe data int
+    public static String ex234(int n){
+        // jika int n kurang dari sama dengan 0
+        if (n <= 0)
+            // maka muncullah output yang benar
+            return " ";
+        // method untuk menghitung nilai hasil
+        return ex234(n-3) + n + ex234(n-2) + n;
+    }
+    // menampilkan output
+    public static void main(String[] args){
+        System.out.println(ex234(3));
+    }
+}
