@@ -1,0 +1,34 @@
+public class tugas8 {
+    // method untuk mengecek apakah elemen yang kita cari ada di dalam array atau tidak
+    public static boolean binarySearch(int[] x, int start, int end, int n){
+        // jika int 'end' kurang dari int start
+        if(end < start)
+            // maka outputnya 'false'
+            return false;
+        int mid = (start+end) / 2;
+            // jika int x dengan index mid sama dengan n
+        if(x[mid] == n){
+            // maka outputnya 'true'
+            return true;
+        } else {
+            //jika int x dengan index mid kurang dari n
+            if(x[mid] < n){
+                // maka output yang akan muncul seperti method dibawah 
+                return binarySearch(x, mid+1, end, n);
+            }else { // jika tidak
+                // maka output yang akan muncul seperti method dibawah
+                return binarySearch(x,start, mid-1, n);
+            }
+        }
+    }
+    // menampilkan output
+    public static void main(String[] args){
+        // memberi nilai pada setiap var int
+        int[] myArray = {1,2,3,5,78,98,46,60,15,4,7,74,54};
+        int s = myArray.length;
+        int x = 12;
+        
+        boolean result = binarySearch(myArray, 0, s-1, x);
+        System.out.println(result);
+    }
+}
